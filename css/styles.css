@@ -605,17 +605,19 @@ line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
 color: var(--navy-blue-color);
-margin-top: 72px;
-margin-bottom: 34px;
+margin-top:48px;
+margin-bottom: 16px;
 }
 .name-label{
   margin-bottom: 4px;  
 }
 .comment-message{
     font-weight: 400;
-font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.04em;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+.comment-message ::placeholder{
 color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-check{
@@ -627,13 +629,18 @@ color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-input-wrapper{
     position: relative;
+    display: block;
 }
 .modal-form-icon{
     display: block;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 16px;
     transform: translate(0, -50%);
+    transition-property: fill ;
+transition-duration: 250 ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .modal-form{
     display: flex;
@@ -644,18 +651,33 @@ color: rgba(117, 117, 117, 0.5);
 border-radius: 4px;
 width: 100%;
 height: 40px;
-margin-bottom: 26px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 padding-left: 38px;
+transition-property: border-color ;
+transition-duration: 250 ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+}
+.modal-input:focus{
+    outline: none;
+    border-color:var(--iris-color);
+}
+.modal-input:focus+.modal-form-icon{
+    fill: var(--iris-color);
 }
 .modal-forn-input-desc{
     display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
     color:var(--light-slate);
-    margin-bottom: 26px;
+    margin-bottom: 4px;
+    margin-top: 8px;
 }
 .comment-message{
     width: 100%;
@@ -663,9 +685,16 @@ padding-left: 38px;
     border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 margin-bottom: 16px;
-padding: 15px;
+padding: 8px 16px;
 resize: none;
+transition-property: border-color ;
+transition-duration: 250 ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.comment-message:focus{
+    outline: none;
+    border-color: var(--iris-color);
 }
 .active{
     position: relative;
