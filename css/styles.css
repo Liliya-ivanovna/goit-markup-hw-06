@@ -662,6 +662,26 @@ font-weight: 400;
     letter-spacing: 0.01em;
 
 }
+.modal-form-check::before{
+    width: 16px;
+height: 16px;
+border: 1.25px solid var(--navy-blue-color);
+border-radius: 2px;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+.chekbox:focus+.modal-form-check::before{
+    background:var(--ocean-color);
+    border: 1.25px solid var(--ocean-color);
+    border-radius: 2px;
+}
+.chekbox:checked+.modal-form-check::before{
+    background-image: url(../images/Vector-4.svg);
+    background: #404BBF;
+border: 1.25px solid #404BBF;
+border-radius: 2px;
+}
 .modal-input:focus{
     outline: none;
     border-color:var(--iris-color);
