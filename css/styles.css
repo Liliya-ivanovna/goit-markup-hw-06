@@ -687,12 +687,34 @@ border-radius: 2px;
     background:var(--ocean-color);
     border: 1.25px solid var(--ocean-color);
     border-radius: 2px;
-    
 }
 .chekbox:checked+.modal-form-check::before{
     background-image: url(../images/Vector-4.svg);
+    background-size: contain;
     background: #404BBF;
 
+}
+.modal-form-submit{
+    min-width: 169px;
+    height: 56px;
+    padding: 16px 32px;
+align-self: center;
+background:var(--iris-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+letter-spacing: 0.04em;
+color:var(--body-background-color);
+border: none;
+transition-property:  background;
+transition-duration: 250 ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-submit:is(:hover,:focus){
+    background:var(--ocean-color);
 }
 .modal-input:focus{
     outline: none;
